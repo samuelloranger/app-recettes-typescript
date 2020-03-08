@@ -1,0 +1,252 @@
+/************************************
+			GOOGLE FONTS
+************************************/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans&display=swap');
+
+/************************************
+			  COLORS
+************************************/
+$bleu: #42adf5;
+$gris: #808080;
+
+/************************************
+			BASE STYLES
+************************************/
+body {
+	margin: 0;
+}
+
+body,
+p,
+span,
+input,
+textarea,
+label {
+	font-family: "Montserrat";
+	font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Work Sans", sans-serif;
+}
+
+h1 {
+	font-weight: 900;
+}
+
+h2 {
+	font-weight: 600;
+}
+
+h3 {
+	font-weight: 400;
+}
+
+label {
+	display: block;
+	color: black;
+	margin-bottom: 3px;
+}
+
+input,
+textarea {
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	width: 100%;
+	height: 30px;
+	padding-left: 5px;
+	transition: 0.15s ease-in-out;
+	resize: none;
+
+	&:focus {
+		border-bottom: 3px solid $bleu;
+		outline: none;
+	}
+}
+
+textarea {
+	height: 150px;
+}
+
+/************************************
+			  BOUTTONS
+************************************/
+.btn {
+    display: block;
+    width: 300px;
+    height: 100%;
+    max-height: 40px;
+    margin: 5px 0 15px 0;
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+    color: white;
+    background-color: #42adf5;
+    transition: 0.15s ease-in-out;
+    border: 0px;
+
+	&:hover {
+		transform: translateY(-3px);
+		color: white;
+		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+	}
+
+	&:focus {
+		outline: none;
+		transform: translateY(-3px);
+		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+	}
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+}
+
+/************************************
+		  REUSABLE CLASSES	
+************************************/
+.text-center {
+	text-align: center;
+}
+
+.error {
+	color: red;
+	margin-top: 8px;
+
+	svg {
+		margin-right: 5px;
+	}
+}
+
+/************************************
+			 HEADER
+************************************/
+.header {
+	padding: 15px 0;
+	background-color: red;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+
+	h1 {
+		margin: 0;
+	}
+}
+
+/************************************
+			  FORM
+************************************/
+.containerForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	.formConnexion {
+		width: 40%;
+
+		label {
+			margin-top: 15px;
+		}
+
+		small,
+		span {
+			display: block;
+		}
+
+		&__btns {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 15px;
+
+			.btn {
+				width: 48%;
+				margin: 0;
+
+				&--register {
+					background-color: #ffbb00;
+					color: black;
+				}
+			}
+		}
+	}
+}
+
+/************************************
+			 RECIPES
+************************************/
+.recipes {
+	position: relative;
+
+	&__title {
+		margin-top: 25px;
+	}
+
+	&__addBtn {
+		position: absolute;
+		right: 25px;
+		border-radius: 32px;
+		background-color: red;
+		width: 42px;
+		height: 42px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: 0.15s ease-in-out;
+
+		&:hover {
+			transform: translateY(-4px);
+		}
+
+		a {
+			color: white;
+			font-size: 25px;
+		}
+	}
+
+	&__content {
+		&__card {
+			border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+			margin-bottom: 40px;
+			position: relative;
+
+			&:last-child {
+				border: none;
+			}
+
+			.title {
+				text-align: center;
+				font-weight: bold;
+				margin-bottom: 25px;
+			}
+
+			.content {
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+
+				&__editLink {
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+
+				&__image {
+					display: block;
+					height: 100%;
+					width: 33%;
+				}
+
+				&__infos {
+					width: 63%;
+				}
+			}
+		}
+	}
+}
